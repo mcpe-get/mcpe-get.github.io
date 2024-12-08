@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft PE Versions</title>
+    <!-- إضافة Tab Icon -->
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/5/51/Minecraft_favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        header img {
+            max-width: 150px;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .search-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+
+        .search-input {
+            width: 90%;
+            max-width: 400px;
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #4CAF50;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .search-input:focus {
+            border-color: #45a049;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .version-card {
+            background: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 20px 0;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transform: scale(0.95);
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.5s ease, box-shadow 0.3s ease;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        .version-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .download-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #45a049;
+            transform: translateY(-3px) scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Minecraft PE Versions</h1>
+        <p>جميع إصدارات Minecraft PE من 0.15.10 إلى 1.21.50</p>
+    </header>
+
+    <div class="search-container">
+        <input type="text" id="search" class="search-input" placeholder="ابحث عن الإصدار..." onkeyup="searchVersions()">
+    </div>
+
+    <main id="versions">
+        <!-- النسخ -->
+        <div class="version-card">
+            <h2>Version 1.21.50</h2>
+            <p>Release Date: December 2024</p>
+            <p>Features: Latest bug fixes and performance improvements.</p>
+            <a href="files/mcpe_1.21.50.apk" class="download-btn" download>Download</a>
+        </div>
+        <div class="version-card">
+            <h2>Version 1.21.10</h2>
+            <p>Release Date: October 2024</p>
+            <p>Features: New mobs and items added.</p>
+            <a href="files/mcpe_1.21.10.apk" class="download-btn" download>Download</a>
+        </div>
+        <div class="version-card">
+            <h2>Version 1.20.30</h2>
+            <p>Release Date: August 2024</p>
+            <p>Features: Biome updates and new items.</p>
+            <a href="files/mcpe_1.20.30.apk" class="download-btn" download>Download</a>
+        </div>
+        <div class="version-card">
+            <h2>Version 1.19.50</h2>
+            <p>Release Date: December 2022</p>
+            <p>Features: Introduced frogs and mangrove swamps.</p>
+            <a href="files/mcpe_1.19.50.apk" class="download-btn" download>Download</a>
+        </div>
+        <div class="version-card">
+            <h2>Version 1.18.10</h2>
+            <p>Release Date: November 2021</p>
+            <p>Features: Caves and Cliffs Update Part 2.</p>
+            <a href="files/mcpe_1.18.10.apk" class="download-btn" download>Download</a>
+        </div>
+        <div class="version-card">
+            <h2>Version 1.17.0</h2>
+            <p>Release Date: June 2021</p>
+            <p>Features: Caves and Cliffs Update Part 1.</p>
+            <a href="files/mcpe_1.17.0.apk" class="download-btn" download>Download</a>
+        </div>
+        <div class="version-card">
+            <h2>Version 1.16.220</h2>
+            <p>Release Date: March 2021</p>
+            <p>Features: Introduced new blocks and fixes.</p>
+            <a href="files/mcpe_1.16.220.apk" class="download-btn" download>Download</a>
+        </div>
+        <div class="version-card">
+            <h2>Version 0.15.10</h2>
+            <p>Release Date: September 2016</p>
+            <p>Features: Introduced new blocks and items.</p>
+            <a href="files/mcpe_0.15.10.apk" class="download-btn" download>Download</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 MCPE Fan Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function searchVersions() {
+            const input = document.getElementById('search').value.toLowerCase();
+            const cards = document.querySelectorAll('.version-card');
+            cards.forEach(card => {
+                const version = card.querySelector('h2').textContent.toLowerCase();
+                if (version.includes(input)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
